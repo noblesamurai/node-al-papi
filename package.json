@@ -1,0 +1,28 @@
+{
+  "author":      "Chavez <me@example.com>",
+  "name":        "al-papi",
+  "description": "AuthorityLabs Partner API wrapper.",
+  "version":     "0.0.1",
+  "homepage":    "http://github.com/mtchavez/node-al-papi",
+  "keywords":    ["AuthorityLabs", "Partner API", "AuthorityLabs API"],
+  "repository": {
+    "type": "git",
+    "url":  "http://github.com/mtchavez/node-al-papi"
+  },
+  "main": "lib/AlPapi",
+  "directories": {
+    "lib": "./lib"
+  },
+  "engines": {
+    "node": "~v0.6.7"
+  },
+  "dependencies": {
+    "request": "2.9.x"
+  },
+  "devDependencies": {
+    "vows":       "*",
+    "supervisor": "*",
+    "watch":      "*",
+    "uglify-js":  "*"
+  }
+}
