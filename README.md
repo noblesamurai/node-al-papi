@@ -96,7 +96,57 @@ When making an API request a response object is returned with any errors, http r
         console.log(response.errorMessage);
       }
     });
-    
+
+## Web Insight
+
+### Description
+
+Web Insight queue takes a URL for the Partner API to scrape and parse out high level insight about the page
+and return the results to your callback URL passed in or set for your account.
+
+### POST
+
+Post the URL of the page you want to gain insight into and the callback URL knowing when your results are
+ready to get.
+
+    var al = require('al-papi');
+    al.AlConfig('yRRBtB99jSIovMy6y6K0');
+    req = new al.AlWebInsight();
+    req.post({'url' : 'http://www.qwiki.com', 'callback' : 'http://api.authoritylabs.com/callbacks?from=node'}, function(response) {
+
+      console.log(response.statusCode);
+      console.log(response.url);
+      console.log(response.params);
+      
+      if (response.success) {
+        console.log(response.body);
+      }
+      else {
+        console.log(response.errorMessage);
+      }
+    });
+
+### GET
+
+When your results are ready to get you will receive a callback that contains the information on how
+to get the insight on your URL. In the callback you should receive a date_created and time_created to use
+in your get request. You will also use your original URL posted.
+
+    req = new al.AlWebInsight();
+    req.get({'url' : 'http://www.qwiki.com', 'date_created' : '2012-06-14', 'time_created' : '01:50'}, function(response) {
+
+      console.log(response.statusCode);
+      console.log(response.url);
+      console.log(response.params);
+      
+      if (response.success) {
+        console.log(response.body);
+      }
+      else {
+        console.log(response.errorMessage);
+      }
+    });
+
 ## License
 
 Written by Chavez
