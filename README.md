@@ -109,8 +109,6 @@ and return the results to your callback URL passed in or set for your account.
 Post the URL of the page you want to gain insight into and the callback URL knowing when your results are
 ready to get.
 
-    var al = require('al-papi');
-    al.AlConfig('yRRBtB99jSIovMy6y6K0');
     req = new al.AlWebInsight();
     req.post({'url' : 'http://www.qwiki.com', 'callback' : 'http://api.authoritylabs.com/callbacks?from=node'}, function(response) {
 
