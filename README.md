@@ -4,6 +4,7 @@ Node.js AuthorityLabs Partner API Package
 A wrapper around the Partner API calls. Allows post, priority post and get calls.
 
 * Github: http://github.com/mtchavez/node-al-papi
+* [![endorse](http://api.coderwall.com/mtchavez/endorsecount.png)](http://coderwall.com/mtchavez)
 
 ## Install
 
