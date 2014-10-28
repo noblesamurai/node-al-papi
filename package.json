@@ -9,6 +9,9 @@
     "type": "git",
     "url":  "http://github.com/mtchavez/node-al-papi"
   },
+  "scripts": {
+    "test": "mocha test/index.js"
+  },
   "main": "lib/AlPapi",
   "directories": {
     "lib": "./lib"
