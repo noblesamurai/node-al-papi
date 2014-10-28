@@ -10,6 +10,13 @@ A wrapper around the Partner API calls. Allows post, priority post and get calls
 
     npm install al-papi
 
+## Tests
+Some very basic tests that run against a real authlabs account can be run as
+so (subsitute in your api key):
+```bash
+API_KEY=myapikey npm test
+```
+
 ## Usage
 
 Make a request object using your api key:
