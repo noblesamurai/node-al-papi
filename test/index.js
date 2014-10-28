@@ -1,6 +1,7 @@
 var alApi = require('../'),
     expect = require('expect.js'),
-    async = require('async');
+    async = require('async'),
+    nock = require('nock');
 
 describe('al-papi', function() {
   it('gives unauthorized if so', function(done) {
@@ -41,6 +42,22 @@ describe('al-papi', function() {
           }
         });
       }, done);
+    });
+
+    it('gives success==false on non-200', function(done) {
+      var ALEndpoint = nock("http://api.authoritylabs.com").
+          filteringPath(function(path) {
+            return '/matchany';
+          }).
+          post('/matchany').
+          once().
+          reply(404, 'Not Found');
+
+      req.post({'keyword' : 'Centaur Soirée'}, function(result) {
+        expect(result.success).to.be(false);
+        ALEndpoint.done();
+        done();
+      });
     });
   });
 });
