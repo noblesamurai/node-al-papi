@@ -1,13 +1,17 @@
 {
-  "author":      "Chavez",
-  "name":        "al-papi",
+  "author": "Chavez",
+  "name": "al-papi",
   "description": "AuthorityLabs Partner API wrapper.",
-  "version":     "0.0.3",
-  "homepage":    "http://github.com/mtchavez/node-al-papi",
-  "keywords":    ["AuthorityLabs", "Partner API", "AuthorityLabs API"],
+  "version": "0.0.3",
+  "homepage": "http://github.com/mtchavez/node-al-papi",
+  "keywords": [
+    "AuthorityLabs",
+    "Partner API",
+    "AuthorityLabs API"
+  ],
   "repository": {
     "type": "git",
-    "url":  "http://github.com/mtchavez/node-al-papi"
+    "url": "http://github.com/mtchavez/node-al-papi"
   },
   "scripts": {
     "test": "mocha test/index.js"
@@ -23,9 +27,10 @@
     "request": "2.9.x"
   },
   "devDependencies": {
-    "vows":       "*",
+    "expect.js": "^0.3.1",
     "supervisor": "*",
-    "watch":      "*",
-    "uglify-js":  "*"
+    "uglify-js": "*",
+    "vows": "*",
+    "watch": "*"
   }
 }
